@@ -6,7 +6,22 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /* 
+        * (todos), .tag (classes), #aprovados (ids),
+        #aninhado > div (pega a div q é filha direta dentro do id aninhado),
+        #aninhado > section = ERRADO pois não é uma filha direta | #aninhado section = CERTO pois é um descendente,
+        p + ul (seletor de irmão que é adjacente ao primeiro elemento),
+        p ~ ol (seleciona o irmão geral),
+        [feira] (seletor de propriedades),
+        [feira=casa] (seleciona a propriedade com seu valor),
+        section > :nth-child(odd) (pega os filhos impares dentro de um elemento)
+        p, ul (seleciona varios)
+        section > span:nth-of-type(2) (segundo elemento do tipo span)
+        */
+        p, ul {
+            color: #ff0;
+            background-color: #f77;
+        }
     </style>
 </head>
 
@@ -29,7 +44,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
