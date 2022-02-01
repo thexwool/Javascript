@@ -5,11 +5,23 @@
     <meta charset="UTF-8">
     <title>Origem CSS: Externo, Interno e Inline</title>
     <style>
-        /* ... */
+        body{
+            background-color: aquamarine;
+        }
+        /*
+        precedencia
+        1-inline
+        2-externo = interno
+
+        no caso de externo e interno
+        o ultimo css processado vai ter preferencia,
+        o inline, terá prioridade sobre os demais.
+        */
     </style>
+    <link rel="stylesheet" href="css/externo.css">
 </head>
 
-<body>
+<body style="background-color: blueviolet;">
     <h1>E agora?</h1>
 </body>
 
